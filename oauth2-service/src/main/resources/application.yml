@@ -1,0 +1,23 @@
+#权限服务
+server:
+  port: 9002
+
+spring:
+  application:
+    name: oauth2-service
+  main:
+    allow-bean-definition-overriding: true
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.20.10.5:8837,172.20.10.5:8848,172.20.10.5:8859
+      config:
+        server-addr: 172.20.10.5:8837,172.20.10.5:8848,172.20.10.5:8859
+        file-extension: yaml
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: qwer1989
+    url: jdbc:mysql://127.0.0.1:3306/oauth?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
